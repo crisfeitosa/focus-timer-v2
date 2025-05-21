@@ -17,4 +17,8 @@ export function setMinutes() {
   el.minutes.addEventListener('focus', () => {
     el.minutes.textContent = "";
   });
+
+  el.minutes.addEventListener('keydown', (event) => {
+    /\d/.test(event.key) ? null : event.preventDefault();
+  });
 };
